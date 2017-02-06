@@ -20,13 +20,13 @@ Endpoints and their purpose
 
 Attempt to access resources [REST API] without any authorization [will fail of-course].<br/>
 GET http://localhost:8080/SpringSecurityOAuth2Example/user/ 
-<br/>
+<br/><br/>
 Ask for tokens[access+refresh] using HTTP POST on /oauth/token, with grant_type=password,and resource owners credentials as req-params. Additionally, send client credentials in Authorization header.<br/>
 POST http://localhost:8080/SpringSecurityOAuth2Example/oauth/token?grant_type=password&username=bill&password=abc123 
-<br/>
+<br/><br/>
 Ask for a new access token via valid refresh-token, using HTTP POST on /oauth/token, with grant_type=refresh_token,and sending actual refresh token. Additionally, send client credentials in Authorization header.<br/>
 POST http://localhost:8080/SpringSecurityOAuth2Example/oauth/token?grant_type=refresh_token&refresh_token=094b7d23-973f-4cc1-83ad-8ffd43de1845 
-<br/>
+<br/><br/>
 Access the resource by providing an access token using access_token query param with request.<br/>
 GET http://localhost:8080/SpringSecurityOAuth2Example/user/?access_token=3525d0e4-d881-49e7-9f91-bcfd18259109 
 <br/>
